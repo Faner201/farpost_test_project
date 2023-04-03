@@ -20,6 +20,6 @@ This command will search for all count files regardless of their extension in th
 The second way to work with the application, is this:
 
 ```bash
-php bin/console app:summator  path'(full path of the search directive)'
+php bin/console app:summator  path[full path of the search directive]
 ```
 This option will search for files with the name count in the specified directive.
