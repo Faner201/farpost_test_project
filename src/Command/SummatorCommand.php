@@ -20,14 +20,14 @@ class SummatorCommand extends Command
             ->addArgument('directory', InputArgument::OPTIONAL, 'Directory to scan for count files', './');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $dir = $input->getArgument('directory');
 
         if ($dir) {
             $dir = realpath($dir);
 
-            if (!$dir || !is_readable($dir)) {
+            if (!is_readable($dir)) {
                 $output->writeln('<error>Invalid directory specified.</error>');
                 return Command::FAILURE;
             }
