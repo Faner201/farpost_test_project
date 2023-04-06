@@ -11,6 +11,11 @@ This project was implemented on the symfony framework. Standard project generati
 symfony new name_project
 ```
 ## Project opportunities
+To start the project it is necessary to assemble a container:
+```bash
+docker-compose up -d --build
+docker-compose exec app /bin/bash
+```
 There are two ways of working with the application. 
 The first way:
 ```bash
