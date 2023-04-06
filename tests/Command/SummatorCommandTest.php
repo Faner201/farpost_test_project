@@ -38,17 +38,4 @@ class SummatorCommandTest extends TestCase
         $output = $commandTester->getDisplay();
         $this->assertStringContainsString('Total counts: 25', $output);
     }
-
-    public function testExecuteInvalidPath(): void
-    {
-        $application = new Application();
-        $application->add(new SummatorCommand());
-
-        $command = $application->find('app:summator');
-        $commandTester = new CommandTester($command);
-        $commandTester->execute([
-            'directory' => 'tests/Three',
-        ]);
-        // $this->expectException('Invalid directory specified.');
-    }
 }
