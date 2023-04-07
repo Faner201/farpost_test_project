@@ -1,4 +1,4 @@
-# Test project junior php devloper position
+# Test project junior backend devloper 
 
 This project is a test assignment for a summer internship at Farpost
 
